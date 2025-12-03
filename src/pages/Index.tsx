@@ -45,9 +45,7 @@ const Index = () => {
           <h1 className="text-5xl md:text-6xl font-bold mb-3 tracking-tight">
             Послоям
           </h1>
-          <p className="text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto">
-            Профессиональные решения для вашего бизнеса
-          </p>
+          <p className="text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto">Создание 3D моделей тактильных пособий </p>
         </div>
 
         <div className="flex-1 grid lg:grid-cols-2 gap-8 mb-8">
