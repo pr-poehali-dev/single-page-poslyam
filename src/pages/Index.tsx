@@ -114,9 +114,9 @@ const Index = () => {
             {products.map((product, index) => (
               <Card 
                 key={index} 
-                className="border-border/50 bg-background/95 hover:shadow-xl transition-all duration-300 overflow-hidden group"
+                className="border-border/50 bg-background/95 hover:shadow-xl transition-all duration-300 overflow-hidden group flex flex-col"
               >
-                <CardContent className="p-0">
+                <CardContent className="p-0 flex flex-col h-full">
                   <div className="aspect-square overflow-hidden">
                     <img 
                       src={product.image} 
@@ -124,7 +124,7 @@ const Index = () => {
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
-                  <div className="p-4">
+                  <div className="p-4 flex flex-col flex-1">
                     <h3 className="text-lg font-semibold text-foreground mb-2">
                       {product.title}
                     </h3>
@@ -132,7 +132,7 @@ const Index = () => {
                       {product.price}
                     </p>
                     <Button 
-                      className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
+                      className="w-full bg-accent hover:bg-accent/90 text-accent-foreground mt-auto"
                       onClick={() => console.log(`Заказ: ${product.title}`)}
                     >
                       Заказать
@@ -197,9 +197,8 @@ const Index = () => {
           <Dialog>
             <DialogTrigger asChild>
               <Button 
-                variant="outline" 
                 size="lg"
-                className="px-8 border-primary-foreground/20 hover:bg-primary-foreground/10"
+                className="px-8 bg-primary/80 hover:bg-primary/60 text-primary-foreground border border-primary-foreground/20"
               >
                 <Icon name="Phone" size={20} className="mr-2" />
                 Контакты
