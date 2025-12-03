@@ -36,11 +36,29 @@ const Index = () => {
     { title: "Обучение", icon: "GraduationCap" }
   ];
 
+  const products = [
+    { 
+      title: "Промышленная продукция", 
+      image: "https://cdn.poehali.dev/projects/2b169222-6780-4222-94a7-610835a75454/files/1e91f3be-68bd-4805-b853-1abba233e19b.jpg",
+      price: "от 5 000 ₽"
+    },
+    { 
+      title: "Цифровые продукты", 
+      image: "https://cdn.poehali.dev/projects/2b169222-6780-4222-94a7-610835a75454/files/2da8ebe2-d209-4be7-88ae-303e805cb1e4.jpg",
+      price: "от 15 000 ₽"
+    },
+    { 
+      title: "Консалтинговые услуги", 
+      image: "https://cdn.poehali.dev/projects/2b169222-6780-4222-94a7-610835a75454/files/76d11a50-83a5-4668-b0a6-aeb962df0539.jpg",
+      price: "от 10 000 ₽"
+    }
+  ];
+
   return (
-    <div className="h-screen overflow-hidden bg-primary text-primary-foreground flex flex-col">
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+    <div className="h-screen overflow-y-auto bg-primary text-primary-foreground">
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
       
-      <div className="container mx-auto px-6 py-8 relative z-10 flex flex-col h-full justify-between">
+      <div className="container mx-auto px-6 py-8 relative z-10">
         <div className="text-center mb-8">
           <h1 className="text-5xl md:text-6xl font-bold mb-3 tracking-tight">
             Послоям
@@ -48,7 +66,7 @@ const Index = () => {
           <p className="text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto">Создание 3D моделей тактильных пособий </p>
         </div>
 
-        <div className="flex-1 grid lg:grid-cols-2 gap-8 mb-8">
+        <div className="grid lg:grid-cols-2 gap-8 mb-8">
           <div>
             <h2 className="text-2xl font-bold mb-4 text-center">Преимущества</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -87,6 +105,42 @@ const Index = () => {
                 </Card>
               ))}
             </div>
+          </div>
+        </div>
+
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold mb-6 text-center">Наши товары</h2>
+          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {products.map((product, index) => (
+              <Card 
+                key={index} 
+                className="border-border/50 bg-background/95 hover:shadow-xl transition-all duration-300 overflow-hidden group"
+              >
+                <CardContent className="p-0">
+                  <div className="aspect-square overflow-hidden">
+                    <img 
+                      src={product.image} 
+                      alt={product.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="text-lg font-semibold text-foreground mb-2">
+                      {product.title}
+                    </h3>
+                    <p className="text-accent text-xl font-bold mb-3">
+                      {product.price}
+                    </p>
+                    <Button 
+                      className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
+                      onClick={() => console.log(`Заказ: ${product.title}`)}
+                    >
+                      Заказать
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
 
