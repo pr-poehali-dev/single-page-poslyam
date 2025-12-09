@@ -38,9 +38,9 @@ const Index = () => {
 
   const products = [
     { 
-      title: "Промышленная продукция", 
-      image: "https://cdn.poehali.dev/projects/2b169222-6780-4222-94a7-610835a75454/files/1e91f3be-68bd-4805-b853-1abba233e19b.jpg",
-      price: "от 5 000 ₽"
+      title: "Макет 1", 
+      image: "https://cdn.poehali.dev/files/photo_2025-12-09_23-15-38.jpg",
+      price: "3 000 ₽"
     },
     { 
       title: "Цифровые продукты", 
