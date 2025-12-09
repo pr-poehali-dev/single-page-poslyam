@@ -60,10 +60,8 @@ const Index = () => {
       
       <div className="container mx-auto px-6 py-8 relative z-10">
         <div className="text-center mb-8">
-          <h1 className="text-5xl md:text-6xl font-bold mb-3 tracking-tight">
-            Послоям
-          </h1>
-          <p className="text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto">Создание 3D моделей тактильных пособий </p>
+          <h1 className="text-5xl md:text-6xl font-bold mb-3 tracking-tight">По слоям</h1>
+          <p className="text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto">Создание 3D-моделей тактильных пособий</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 mb-8">
